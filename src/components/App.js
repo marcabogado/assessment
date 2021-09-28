@@ -10,7 +10,7 @@ function App() {
   const [users, setUsers] = useState([]);
   
   const addUserHandler = (userd) =>{
-    console.log(userd);
+    //console.log(userd);
     setUsers([...users, {id: uuid(), ...userd }]);
   };
 
