@@ -16,6 +16,14 @@ const initialState = {
 class AddUser extends React.Component{
     state = initialState;
 
+    /* constructor(){
+        super();
+        this.state={value:''};
+    }
+    charallow(e){
+        this.setState({inputtxt:e.target.value.replace(/[^a-zA-Z]/ig,'')})
+    } */
+
     validate = () => {
         let fnameError="";
         let lnameError="";
