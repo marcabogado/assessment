@@ -1,7 +1,6 @@
 import React from "react";
 
-class AddUser extends React.Component{
-    state = {
+const initialState = {
         fname:"",
         lname:"",
         email:"",
@@ -12,7 +11,10 @@ class AddUser extends React.Component{
         emailError:"",
         eidError:"",
         bdateError:"",
-    }
+}
+
+class AddUser extends React.Component{
+    state = initialState;
 
     validate = () => {
         let fnameError="";
@@ -58,7 +60,7 @@ class AddUser extends React.Component{
         
         if(isValid) {
         this.props.addUserHandler(this.state);
-        this.setState({fname:"", email: "", lname:"", eid:"", bdate:""});
+        this.setState(initialState);
         alert("Data Successfully Saved");
         }
     }
